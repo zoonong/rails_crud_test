@@ -1,0 +1,20 @@
+<h1 style="align:center;">게시글 수정</h1><br/>
+
+<div class="container">
+    <%= form_for @post, url: post_path, method: :patch do |f| %>
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		<div>
+			<div>제목</div>
+            <%= f.text_field :title, class: "form-control" %>
+			<%# <input name="post_title" type="text" class="form-control" placeholder="제목"> <!-- placeholder이 아무 글을 적지 않은 input란에 미리 내용을 작성함으로서 안내메세지 효과를 줌. --> %>
+			<small>미풍양속을 해치는 글을 작성 시 제재가 이루어지니 주의바랍니다.</small> 
+		</div>
+
+		<div class="form-group">
+			<div>내용</div>
+            <%= f.text_area :content, class: "form-control" %>
+		</div>
+
+        <%= f.submit "글쓰기", class: "btn btn-primary" %>
+	<% end %>
+</div>

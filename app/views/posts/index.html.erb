@@ -1,0 +1,13 @@
+<h1 style="algin: center;">게시판 리스트</h1><br/>
+
+<% @posts.each do |t| %>
+    제목 : <%= t.title %><br/>
+    내용 : <%= t.content %><br/>
+    <a href=<%= post_path(t.id)%>>자세히</a>
+    <hr/>
+<% end %>
+
+<div style="text-align: right">
+    <a href=<%= new_post_path %> class="btn btn-primary">글쓰기</a>
+    
+</div>
