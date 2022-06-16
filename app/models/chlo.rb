@@ -1,0 +1,2 @@
+class Chlo < ApplicationRecord
+end

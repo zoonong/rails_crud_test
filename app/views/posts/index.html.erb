@@ -4,7 +4,11 @@
     제목 : <%= t.title %><br/>
     내용 : <%= t.content %><br/>
     <a href=<%= post_path(t.id)%>>자세히</a>
+    <!--<a href=<%= post_path(t) %> data-method="delete">삭제</a>-->
+    <div><%#= link_to '삭제하기aaa', post_path(t.id), method: :delete %></div>
+    <%= button_to '삭제aaa', t, method: :delete %>
     <hr/>
+    
 <% end %>
 
 <div style="text-align: right">

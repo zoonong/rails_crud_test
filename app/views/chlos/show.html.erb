@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @chlo %>
+
+<div>
+  <%= link_to "Edit this chlo", edit_chlo_path(@chlo) %> |
+  <%= link_to "Back to chlos", chlos_path %>
+
+  <%= button_to "Destroy this chlo", @chlo, method: :delete %>
+</div>
